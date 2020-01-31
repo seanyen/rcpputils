@@ -6,6 +6,7 @@
   <description>Package containing utility code for C++.</description>
   <maintainer email="eknapp@amazon.com">Emerson Knapp</maintainer>
   <license>Apache License 2.0</license>
+  <license>BSD-3-Clause</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_cmake_ros</buildtool_depend>
