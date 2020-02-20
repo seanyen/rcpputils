@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-          os: [ubuntu-18.04]
+          os: [ubuntu-18.04, windows-latest]
     steps:
     - uses: ros-tooling/setup-ros@0.0.13
     - uses: ros-tooling/action-ros-ci@0.0.13
