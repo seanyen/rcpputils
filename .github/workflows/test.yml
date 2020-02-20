@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - seanyen**
   schedule:
     # Run every hour. This helps detect flakiness,
     # and broken external dependencies.
