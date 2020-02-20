@@ -19,7 +19,7 @@ jobs:
           os: [ubuntu-18.04, windows-latest]
     steps:
     - uses: ros-tooling/setup-ros@0.0.13
-    - uses: ros-tooling/action-ros-ci@0.0.13
+    - uses: ros-tooling/action-ros-ci@master
       with:
         package-name: rcpputils
     - uses: actions/upload-artifact@master
