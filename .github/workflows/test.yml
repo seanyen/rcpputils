@@ -16,16 +16,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-          os: [ubuntu-18.04, windows-latest]
+          os: [ubuntu-latest, windows-latest]
     steps:
     - uses: ros-tooling/setup-ros@master
     - run: |
         pip3 install rosinstall_generator
-        rosinstall_generator rcpputils --rosdistro eloquent --deps-only --deps --upstream-development > /tmp/deps.repos
+        rosinstall_generator rcpputils --rosdistro eloquent --deps-only --deps --upstream-development > deps.repos
     - uses: seanyen/action-ros-ci@seanyen/windows
       with:
         package-name: rcpputils
-        vcs-repo-file-url: /tmp/deps.repos
+        vcs-repo-file-url: deps.repos
     - uses: actions/upload-artifact@master
       with:
         name: colcon-logs
