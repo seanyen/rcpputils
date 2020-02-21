@@ -19,7 +19,9 @@ jobs:
           os: [ubuntu-18.04, windows-latest]
     steps:
     - uses: ros-tooling/setup-ros@master
-    - run: rosinstall_generator rcpputils --rosdistro eloquent --deps-only --deps --upstream-development > /tmp/deps.repos
+    - run: |
+        pip3 install rosinstall_generator
+        rosinstall_generator rcpputils --rosdistro eloquent --deps-only --deps --upstream-development > /tmp/deps.repos
     - uses: seanyen/action-ros-ci@seanyen/windows
       with:
         package-name: rcpputils
