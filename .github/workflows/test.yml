@@ -18,7 +18,7 @@ jobs:
       matrix:
           os: [ubuntu-latest, windows-latest]
     steps:
-    - uses: ros-tooling/setup-ros@seanyen/cppcheck
+    - uses: seanyen/setup-ros@seanyen/cppcheck
     - uses: ros-tooling/action-ros-ci@master
       with:
         package-name: rcpputils
