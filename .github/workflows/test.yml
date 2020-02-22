@@ -19,13 +19,9 @@ jobs:
           os: [ubuntu-latest, windows-latest]
     steps:
     - uses: ros-tooling/setup-ros@master
-    - run: |
-        pip3 install rosinstall_generator
-        rosinstall_generator rcpputils --rosdistro eloquent --deps-only --deps --upstream-development > deps.repos
-    - uses: seanyen/action-ros-ci@seanyen/windows
+    - uses: ros-tooling/action-ros-ci@master
       with:
         package-name: rcpputils
-        vcs-repo-file-url: deps.repos
     - uses: actions/upload-artifact@master
       with:
         name: colcon-logs
